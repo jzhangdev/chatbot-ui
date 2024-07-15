@@ -7,6 +7,8 @@ import { ChatCompletionCreateParamsBase } from "openai/resources/chat/completion
 
 export const runtime: ServerRuntime = "edge"
 
+export const preferredRegion = ["sin1", "hnd1"]
+
 export async function POST(request: Request) {
   const json = await request.json()
   const { chatSettings, messages } = json as {
